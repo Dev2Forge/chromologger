@@ -1,5 +1,5 @@
-# pip install chronolog
-import chronolog as ch
+# pip install easylog
+import easylog as ch
 
 l = ch.Logger()
 
