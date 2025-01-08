@@ -1,5 +1,5 @@
-# pip install easylog
-import easylog as ch
+# pip install chromologger
+import chromologger as ch
 
 l = ch.Logger()
 

@@ -1,7 +1,7 @@
-# easylog 
+# Chromologger 
 ### [Versión actual: 0.1.0](#versiones)
 
-> ### Visite [easylog](https://tutosrivegamerlq.github.io/easylog/) para más documentación
+> ### Visite [chromologger](https://tutosrivegamerlq.github.io/chromologger/) para más documentación
 
 ```md
 Requerimientos:
@@ -10,7 +10,7 @@ Requerimientos:
     # Esto instalará la versión más reciente (v0.2.0)
 ```
 
-"**Easylog**" es un módulo diseñado para facilitar la creación de registros (_logs_) en aplicaciones desarrolladas con **Python**. Proporciona una manera sencilla y estructurada de documentar eventos, errores y actividades en los programas, mejorando la capacidad de monitoreo y depuración del código.
+"**Chromologger**" es un módulo diseñado para facilitar la creación de registros (_logs_) en aplicaciones desarrolladas con **Python**. Proporciona una manera sencilla y estructurada de documentar eventos, errores y actividades en los programas, mejorando la capacidad de monitoreo y depuración del código.
 
 > Ejemplo de registro: En una línea
 ```md
@@ -38,6 +38,6 @@ Para empezar a usar, iniciaría con una instancia de la _clase_ **Logger**, la c
  - v0.1.0: Inicial
 
 Si desea conocer más acerca de, visite:
-- [Web de soporte](https://tutosrivegamerlq.github.io/easylog/)
-- [Web pypi.org](https://pypi.org/project/easylog/)
-- [Github project](https://github.com/tutosrivegamerLQ/easylog/)
+- [Web de soporte](https://tutosrivegamerlq.github.io/chromologger/)
+- [Web pypi.org](https://pypi.org/project/chromologger/)
+- [Github project](https://github.com/tutosrivegamerLQ/chromologger/)

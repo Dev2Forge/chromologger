@@ -1,4 +1,4 @@
-"""Easylog es un módulo diseñado para facilitar la creación de registros (logs).
+"""chromologger es un módulo diseñado para facilitar la creación de registros (logs).
 
 Diseñado para usarlo en aplicaciones desarrolladas con Python. 
 Proporciona una manera sencilla y estructurada de documentar eventos, 
@@ -11,7 +11,7 @@ Requerimientos:
 Historial de versiones:
     - v0.1.0: Versión inicial
 
-Para saber más sobre el módulo, visite: [easylog](https://tutosrivegamerlq.github.io/easylog/)
+Para saber más sobre el módulo, visite: [chromologger](https://tutosrivegamerlq.github.io/chromologger/)
 
 @author Tutos Rive Gamer
 """
