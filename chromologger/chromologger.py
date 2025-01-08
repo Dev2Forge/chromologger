@@ -9,6 +9,9 @@ Requerimientos:
     - chromolog==0.2.0
 
 Historial de versiones:
+    - v0.1.3: El usuario queda libre de instalar dependencias, se instalan automáticamente
+    - v0.1.2: Arreglo de errores por twine
+    - v0.1.1: Algunos errores arreglados
     - v0.1.0: Versión inicial
 
 Para saber más sobre el módulo, visite: [chromologger](https://tutosrivegamerlq.github.io/chromologger/)
@@ -19,13 +22,21 @@ Para saber más sobre el módulo, visite: [chromologger](https://tutosrivegamerl
 
 from io import TextIOWrapper
 from datetime import datetime
-# from msqlite.__print import Print
-from chromolog import Print
 import traceback
 import os
 
-__version__ = "0.1.0"
+__version__ = "0.1.3"
 __author__ = "Tutos Rive Gamer"
+
+try:
+    from chromolog import Print
+except ModuleNotFoundError as e:
+    print('\u001B[33mSe instalará el micromódulo "chromolog", visite esta página para más info. (https://tutosrivegamerlq.github.io/chromolog/)\u001B[0m')
+    print('\u001B[31mVisite esta página (https://tutosrivegamerlq.github.io/chromologger/) antes de ejecutar este módulo\u001B[0m')
+    import subprocess
+    import sys
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'chromolog'])
+    from chromolog import Print
 
 # Ruta absoluta de este módulo
 current_path:str = os.path.dirname(__file__)
