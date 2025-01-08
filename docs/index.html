@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de inicializaci&oacute;n</title>
+  <link rel="shortcut icon"
+    href="https://cdn.jsdelivr.net/gh/tutosrivegamerLQ/images-projects-srm-trg@refs/heads/main/modules/chronolog_logo.webp"
+    type="image/x-icon">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/tutosrivegamerLQ/legendary-guacamole@main/css/modules_python_docs/style-v1.0.1.css">
+</head>
+
+<body class="vscode-body vscode-dark">
+  <header>
+    <div class="ctn-img-nav">
+      <a href="https://www.youtube.com/@tutosrive" target="_blank">
+        <img title="@tutosrive Youtube" class="img-nav"
+          src="https://raw.githubusercontent.com/tutosrivegamerLQ/images-projects-srm-trg/main/svg-icons-flags-cursor/icon/youtube.svg"
+          alt="Logo youtube">
+      </a>
+      <a href="https://github.com/tutosrivegamerLQ" target="_blank"><img class="img-nav" title="Author"
+          src="https://avatars.githubusercontent.com/u/108991712?s=400&u=8635c5a4bf3ba434df23aa5b611cae237a964932&v=4"
+          alt="Autor CHRONOLOG - Santiago Rivera Marin"></a>
+    </div>
+    <h1 class="title-header" title="ChronoLog project, Github"><a target="_blank"
+        href="https://github.com/tutosrivegamerLQ/chromalog/">CHRONOLOG</a></h1>
+    <a href="#pip?" target="_blank"><img class="img-nav img-repo-module" title="Package python. Pip install"
+        src="https://cdn.jsdelivr.net/gh/tutosrivegamerLQ/images-projects-srm-trg@refs/heads/main/modules/chronolog_logo.webp"
+        alt="Logo del proyecto 'ChromaLog'"></a>
+  </header>
+  <p>&quot;<strong>Chronolog</strong>&quot; es un módulo diseñado para facilitar la creación de registros
+    (<em>logs</em>) en aplicaciones desarrolladas con <strong>Python</strong>. Proporciona una manera sencilla y
+    estructurada de <em>documentar eventos</em>, <span class="spn-red">errores</span> y actividades en los programas,
+    mejorando la capacidad de
+    monitoreo y
+    depuración del código.
+  <div class="add-container">
+    <a target="_blank" href="http://ouo.io/ref/hoidZ1Y5"><img src="http://ouo.io/images/banners/r1.jpg"
+        title="ouo.io - Make short links and earn the biggest money" /></a>
+  </div>
+
+  <pre>Requerimientos:
+- <span class="spn-blue">chromolog>=0.2.0</span>
+- <span class="spn-green"># pip install chromolog</span>
+- <span class="spn-green"># Esto instalará la versión más reciente (v0.2.0)</span></pre>
+
+  <h3>
+    <p>Ejemplo de registro: En una línea</p>
+  </h3>
+  <pre><span class="spn-green">2025-01-06 19:52:08.636560</span> - <span class="spn-blue">Exception</span>: <span class="spn-red">FileNotFoundError</span> - <span class="spn-blue">File</span>: <span class="spn-yellow">c:\Users\srm\Desktop\msqlite\msqlite\__logger.py</span> - <span class="spn-blue">ErrorLine</span>: 35 - <span class="spn-yellow">Messsage</span>: <span class="spn-red">[Errno 2]</span> <span class="spn-red">No such file or directory</span>: <span class="spn-yellow">'./data/log'</span>
+</pre>
+  <p>Para empezar a usar, iniciaría con una instancia de la <em>clase</em> <strong>Logger</strong>, la cual toma como
+    argumentos el siguiente parámetro:</p>
+  <ul class="f-ul">
+    <li><code>name:str</code>: Nombre del archivo en el cual se guardarán los registros (Ej: <code>'log.log'</code>).
+    </li>
+  </ul>
+  <blockquote>
+    <p>NOTA: Es necesario que el directorio donde se guardará el archivo esté creado, ÚNICAMENTE el
+      <strong>directorio</strong>, el archivo se creará dentro de automáticamente...
+    </p>
+  </blockquote>
+  <pre><code class="language-py"><span class="hljs-comment"># Ejemplo de inicialización</span>
+<span class="hljs-keyword">from</span> chronolog <span class="hljs-keyword">import</span> Logger
+
+<span class="hljs-comment"># Teniendo creado el directorio &quot;data&quot;</span>
+log = Logger(<span class="hljs-string">&#x27;./data/log.log&#x27;</span>)
+<span class="hljs-comment"># Creará un archivo log.log listo para usar...</span>
+</code></pre>
+  <h2 id="métodos-públicos-disponibles">Métodos públicos disponibles:</h2>
+  <ul class="f-ul">
+    <li><strong>log</strong>: Permite guardar mensajes <strong>generales</strong> en el registro, es decir, <strong>NO
+        ERRORES</strong>, mensajes de información <em>ordinaria</em> (general).
+      <ul>
+        <li><strong>Parámetros</strong>:
+          <ul>
+            <li><code>msg:any</code>: Mensaje que se registrará en el archivo.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <pre><code class="language-py"><span class="hljs-comment"># Mensaje general (no error)</span>
+log.log(<span class="hljs-string">&#x27;Ejecución finalizada sin errores&#x27;</span>)
+</code></pre>
+  <p><strong>Dentro del archivo de registro (log.log)</strong>:</p>
+  <pre><span class="spn-green">2025-01-06 19:52:08.636560</span> - <span class="spn-yellow">Ejecución finalizada sin errores</span>
+</pre>
+  <ul class="f-ul">
+    <li><strong>log_e</strong>: Permite registrar errores, es un registro más específico.
+      <ul>
+        <li><strong>Parámetros</strong>:
+          <ul>
+            <li><code>e:Exception</code>: Únicamente se permiten <strong>excepciones</strong>, porque dentro del
+              módulo
+              se trabaja con el objeto <strong>Exception</strong>.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+
+  <pre><code class="language-python"><span class="hljs-comment"><span class="hljs-number">5</span>  # En un bloque try</span>
+<span class="hljs-number">6</span>  <span class="hljs-keyword">try</span>:
+<span class="hljs-number">7</span>    <span class="hljs-comment"># Soy literalmente un error</span>
+<span class="hljs-number">8</span>    tutosrivegamer
+<span class="hljs-number">9</span>  <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+<span class="hljs-number">10</span>   log.log_e(e)
+</code></pre>
+
+  <p><strong>Dentro del archivo de registro (log.log)</strong>:</p>
+  <pre><span class="spn-green">2025-01-06 20:21:30.744693</span> - <span class="spn-blue">Exception</span>: <span class="spn-red">NameError</span> - <span class="spn-blue">File</span>: <span class="spn-yellow">c:\Users\srm\Desktop\msqlite\test.py</span> - <span class="spn-blue">ErrorLine</span>: 8 - <span class="spn-yellow">Messsage</span>: <span class="spn-yellow">name 'tutosrivegamer' is not defined</span>
+</pre>
+  <div class="add-container">
+    <a target="_blank" href="https://beta.publishers.adsterra.com/referral/SecK2taf6d" rel="nofollow"><img alt="banner"
+        src="https://landings-cdn.adsterratech.com/referralBanners/gif/720x90_adsterra_reff.gif" /></a>
+  </div>
+  <h3 id="métodos-privados-">Métodos privados 🔏</h3>
+  <ul class="f-ul">
+    <li><strong>__write</strong>: Escribe los mensages en el archivo cargado</li>
+    <li><strong>__date</strong>: Obtiene la fecha actual</li>
+    <li><strong>__log</strong>: Toma registro de errores internos, guarda los registros en el archivo
+      &quot;./log.log&quot; (En el directorio raíz del módulo)</li>
+  </ul>
+  <pre><code># Solo de uso interno
+</code></pre>
+  <footer style="text-align: center; margin: 10px auto;">&copy;SRM-TRG 2025</footer>
+</body>
+
+</html>
