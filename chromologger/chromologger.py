@@ -9,6 +9,8 @@ Requerimientos:
     - chromolog==0.2.0
 
 Historial de versiones:
+    - v0.1.5: Arreglé el error que generé en la v0.1.4, nunca importé el traceback :|
+    - v0.1.4: Se añadió el manejo de dependencias automáticas correctamente, antes las manejaba con `subpoccess`, pero ahora se hace con el `pip` original (`.toml[dependencies]`)
     - v0.1.3: El usuario queda libre de instalar dependencias, se instalan automáticamente
     - v0.1.2: Arreglo de errores por twine
     - v0.1.1: Algunos errores arreglados
@@ -22,26 +24,19 @@ Para saber más sobre el módulo, visite: [chromologger](https://tutosrivegamerl
 
 from io import TextIOWrapper
 from datetime import datetime
-import traceback
+from chromolog import Print
 import os
 
-__version__ = "0.1.3"
+__version__ = "0.1.5"
 __author__ = "Tutos Rive Gamer"
 
-try:
-    from chromolog import Print
-except ModuleNotFoundError as e:
-    print('\u001B[33mSe instalará el micromódulo "chromolog", visite esta página para más info. (https://tutosrivegamerlq.github.io/chromolog/)\u001B[0m')
-    print('\u001B[31mVisite esta página (https://tutosrivegamerlq.github.io/chromologger/) antes de ejecutar este módulo\u001B[0m')
-    import subprocess
-    import sys
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'chromolog'])
-    from chromolog import Print
 
 # Ruta absoluta de este módulo
 current_path:str = os.path.dirname(__file__)
 # Escribir mensajes por consola con colores
 p:Print = Print()
+
+p.warn('Visite esta página (https://tutosrivegamerlq.github.io/chromologger/) antes de ejecutar este módulo')
 
 class Logger:
     """Escribir registros de ejecución en archivos y almacenar sus registros claros y con fechas de ejecución exactas
@@ -163,5 +158,6 @@ class Logger:
         Returns:
             `dict`: Diccionario con claves: line (Línea del error), path (Ruta del archivo de error)
         """
+        import traceback
         trace_back = traceback.extract_tb(e.__traceback__)
         return {'line': trace_back[-1][1], 'path': trace_back[-1][0]}
