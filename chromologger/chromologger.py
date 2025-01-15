@@ -1,4 +1,4 @@
-# v0.1.6
+# v0.1.7
 """chromologger es un módulo diseñado para facilitar la creación de registros (logs).
 
 Diseñado para usarlo en aplicaciones desarrolladas con Python. 
@@ -10,6 +10,7 @@ Requerimientos:
     - chromolog=>0.2.0
 
 Historial de versiones:
+    - v0.1.7: Errores menores
     - v0.1.6: Actualización de dependencias 
     - v0.1.5: Arreglé el error que generé en la v0.1.4, nunca importé el traceback :|
     - v0.1.4: Se añadió el manejo de dependencias automáticas correctamente, antes las manejaba con `subpoccess`, pero ahora se hace con el `pip` original (`.toml[dependencies]`)
@@ -29,7 +30,7 @@ from datetime import datetime
 from chromolog import Print
 import os
 
-__version__ = "0.1.6"
+__version__ = "0.1.7"
 __author__ = "Tutos Rive Gamer"
 
 
@@ -86,7 +87,7 @@ class Logger:
             `e:Exception`: Excepción conla cual se trabajará
         """
         trace:dict = self.__traceback(e)
-        msg:str = f'Exception: {e.__class__.__name__} - File: {trace.get('path')} - ErrorLine: {trace.get('line')} - Messsage: {e}'
+        msg:str = f'Exception: {e.__class__.__name__} - File: {trace.get("path")} - ErrorLine: {trace.get("line")} - Messsage: {e}'
         self.log(msg)
 
     def __write(self, date:datetime, msg:str) -> int:
@@ -136,7 +137,7 @@ class Logger:
             p.err(f'Revise el archivo "log" que se encuentra en esta ruta: {filename}')
             # Escribir registro del error "interno"
             with open(filename, 'a', encoding='utf-8') as f:
-                w = f.writelines([f'{self.__date()} - Exception: {e.__class__.__name__} -File: {trace.get('path')} - ErrorLine: {trace.get('line')} - Messsage: {e}\n'])
+                w = f.writelines([f'{self.__date()} - Exception: {e.__class__.__name__} -File: {trace.get("path")} - ErrorLine: {trace.get("line")} - Messsage: {e}\n'])
                 f.close() 
                 state = w
         except FileNotFoundError as e:
