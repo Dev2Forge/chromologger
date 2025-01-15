@@ -1,3 +1,4 @@
+# v0.1.6
 """chromologger es un módulo diseñado para facilitar la creación de registros (logs).
 
 Diseñado para usarlo en aplicaciones desarrolladas con Python. 
@@ -6,9 +7,10 @@ errores y actividades en los programas, mejorando la capacidad de monitoreo y
 depuración del código.
 
 Requerimientos: 
-    - chromolog==0.2.0
+    - chromolog=>0.2.0
 
 Historial de versiones:
+    - v0.1.6: Actualización de dependencias 
     - v0.1.5: Arreglé el error que generé en la v0.1.4, nunca importé el traceback :|
     - v0.1.4: Se añadió el manejo de dependencias automáticas correctamente, antes las manejaba con `subpoccess`, pero ahora se hace con el `pip` original (`.toml[dependencies]`)
     - v0.1.3: El usuario queda libre de instalar dependencias, se instalan automáticamente
@@ -27,7 +29,7 @@ from datetime import datetime
 from chromolog import Print
 import os
 
-__version__ = "0.1.5"
+__version__ = "0.1.6"
 __author__ = "Tutos Rive Gamer"
 
 

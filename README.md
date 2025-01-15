@@ -1,5 +1,5 @@
 # CHROMOLOGGER 
-### [Versión actual: 0.1.5](#versiones)
+### [Versión actual: 0.1.6](#versiones)
 
 > ### Visite [chromologger](https://tutosrivegamerlq.github.io/chromologger/) para más documentación
 
@@ -35,6 +35,7 @@ Para empezar a usar, iniciaría con una instancia de la _clase_ **Logger**, la c
 - **__log**: Toma registro de errores internos, guarda los registros en el archivo "./log.log" (En el directorio raíz del módulo)
 
 ## Versiones:
+- `v0.1.6`: Actualización de dependencias 
 - `v0.1.5`: Arreglé el error que generé en la `v0.1.4`, nunca importé el traceback :|
 - `v0.1.4`: Se añadió el manejo de dependencias automáticas correctamente, antes las manejaba con `subpoccess`, pero ahora se hace con el `pip` original (`.toml[dependencies]`)
 - `v0.1.3`: El usuario queda libre de instalar dependencias, se instalan automáticamente
