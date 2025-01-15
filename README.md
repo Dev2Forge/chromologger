@@ -7,7 +7,7 @@
 Requerimientos:
     - chromolog>=0.2.0
     # pip install chromolog
-    # Esto instalará la versión más reciente (v0.2.1)
+    # Esto instalará la versión más reciente (v0.2.2)
 ```
 
 "**Chromologger**" es un módulo diseñado para facilitar la creación de registros (_logs_) en aplicaciones desarrolladas con **Python**. Proporciona una manera sencilla y estructurada de documentar eventos, errores y actividades en los programas, mejorando la capacidad de monitoreo y depuración del código.
