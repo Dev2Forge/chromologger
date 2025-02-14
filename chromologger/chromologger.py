@@ -19,7 +19,7 @@ Historial de versiones:
     - v0.1.1: Algunos errores arreglados
     - v0.1.0: Versión inicial
 
-Para saber más sobre el módulo, visite: [chromologger](https://tutosrivegamerlq.github.io/chromologger/)
+Para saber más sobre el módulo, visite: [chromologger](https://tutosrive.github.io/chromologger/)
 
 @author Tutos Rive Gamer
 """
@@ -39,7 +39,7 @@ current_path:str = os.path.dirname(__file__)
 # Escribir mensajes por consola con colores
 p:Print = Print()
 
-p.warn('Visite esta página (https://tutosrivegamerlq.github.io/chromologger/) antes de ejecutar este módulo')
+p.warn('Visite esta página (https://tutosrive.github.io/chromologger/) antes de ejecutar este módulo')
 
 class Logger:
     """Escribir registros de ejecución en archivos y almacenar sus registros claros y con fechas de ejecución exactas

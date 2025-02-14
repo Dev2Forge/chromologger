@@ -1,7 +1,7 @@
 # CHROMOLOGGER [![PyPI Downloads](https://static.pepy.tech/badge/chromologger/month)](https://pepy.tech/projects/chromologger)
 ### [Versión actual: 0.1.7](#versiones)
 
-> ### Visite [chromologger](https://tutosrivegamerlq.github.io/chromologger/) para más documentación
+> ### Visite [chromologger](https://tutosrive.github.io/chromologger/) para más documentación
 
 ```md
 Requerimientos:
@@ -45,6 +45,6 @@ Para empezar a usar, iniciaría con una instancia de la _clase_ **Logger**, la c
 - `v0.1.0`: Versión inicial
 
 Si desea conocer más acerca de, visite:
-- [Web de soporte](https://tutosrivegamerlq.github.io/chromologger/)
+- [Web de soporte](https://tutosrive.github.io/chromologger/)
 - [Web pypi.org](https://pypi.org/project/chromologger/)
-- [Github project](https://github.com/tutosrivegamerLQ/chromologger/)
+- [Github project](https://github.com/tutosrive/chromologger/)
