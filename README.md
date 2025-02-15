@@ -1,5 +1,5 @@
 # CHROMOLOGGER [![PyPI Downloads](https://static.pepy.tech/badge/chromologger/month)](https://pepy.tech/projects/chromologger)
-### [Versión actual: 0.1.7](#versiones)
+### [Versión actual: 0.1.8](#versiones)
 
 > ### Visite [chromologger](https://tutosrive.github.io/chromologger/) para más documentación
 
@@ -7,7 +7,7 @@
 Requerimientos:
     - chromolog>=0.2.0
     # pip install chromolog
-    # Esto instalará la versión más reciente (v0.2.3)
+    # Esto instalará la versión más reciente (v0.2.4)
 ```
 
 "**Chromologger**" es un módulo diseñado para facilitar la creación de registros (_logs_) en aplicaciones desarrolladas con **Python**. Proporciona una manera sencilla y estructurada de documentar eventos, errores y actividades en los programas, mejorando la capacidad de monitoreo y depuración del código.
@@ -26,7 +26,7 @@ Para empezar a usar, iniciaría con una instancia de la _clase_ **Logger**, la c
 ## Métodos públicos disponibles:
 
 - **log**: Permite guardar mensajes **generales** en el registro, es decir, **NO ERRORES**, mensajes de información _ordinaria_ (general).
-- **log_e**: Permite registrar errores, es un registro más específico.
+- **log_e**: Permite registrar errores, es un registro más específico (Tomar registros de `Exception`)
 
 ### Métodos privados 🔏
 
@@ -35,6 +35,7 @@ Para empezar a usar, iniciaría con una instancia de la _clase_ **Logger**, la c
 - **__log**: Toma registro de errores internos, guarda los registros en el archivo "./log.log" (En el directorio raíz del módulo)
 
 ## Versiones:
+- `v0.1.8`: Agrgué manejo de "errores" en el método `log_e(e: Exception)` y actualización del nombre de usuario
 - `v0.1.7`: Errores menores
 - `v0.1.6`: Actualización de dependencias 
 - `v0.1.5`: Arreglé el error que generé en la `v0.1.4`, nunca importé el traceback :|

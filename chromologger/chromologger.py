@@ -1,4 +1,4 @@
-# v0.1.7
+# v0.1.8
 """chromologger es un módulo diseñado para facilitar la creación de registros (logs).
 
 Diseñado para usarlo en aplicaciones desarrolladas con Python. 
@@ -10,6 +10,7 @@ Requerimientos:
     - chromolog=>0.2.0
 
 Historial de versiones:
+    - v0.1.8: Agrgué manejo de "errores" en el método `log_e(e: Exception)` y actualización del nombre de usuario
     - v0.1.7: Errores menores
     - v0.1.6: Actualización de dependencias 
     - v0.1.5: Arreglé el error que generé en la v0.1.4, nunca importé el traceback :|
@@ -21,7 +22,7 @@ Historial de versiones:
 
 Para saber más sobre el módulo, visite: [chromologger](https://tutosrive.github.io/chromologger/)
 
-@author Tutos Rive Gamer
+@author Tutos Rive
 """
 
 
@@ -30,8 +31,8 @@ from datetime import datetime
 from chromolog import Print
 import os
 
-__version__ = "0.1.7"
-__author__ = "Tutos Rive Gamer"
+__version__ = "0.1.8"
+__author__ = "Tutos Rive"
 
 
 # Ruta absoluta de este módulo
@@ -86,9 +87,12 @@ class Logger:
         Args:
             `e:Exception`: Excepción conla cual se trabajará
         """
-        trace:dict = self.__traceback(e)
-        msg:str = f'Exception: {e.__class__.__name__} - File: {trace.get("path")} - ErrorLine: {trace.get("line")} - Messsage: {e}'
-        self.log(msg)
+        try:
+            trace:dict = self.__traceback(e)
+            msg:str = f'Exception: {e.__class__.__name__} - File: {trace.get("path")} - ErrorLine: {trace.get("line")} - Messsage: {e}'
+            self.log(msg)
+        except Exception as e:
+            self.__log(e)
 
     def __write(self, date:datetime, msg:str) -> int:
         """Escribir registros
