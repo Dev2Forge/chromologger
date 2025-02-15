@@ -1,9 +1,15 @@
 # CHROMOLOGGER [![PyPI Downloads](https://static.pepy.tech/badge/chromologger/month)](https://pepy.tech/projects/chromologger)
 ### [Versión actual: 0.1.8](#versiones)
 
+```shell
+pip install chromologger
+```
+---
+
 > ### Visite [chromologger](https://tutosrive.github.io/chromologger/) para más documentación
 
 ```md
+# Se instalará automáticamente
 Requerimientos:
     - chromolog>=0.2.0
     # pip install chromolog
