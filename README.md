@@ -1,5 +1,18 @@
-# CHROMOLOGGER [![PyPI Downloads](https://static.pepy.tech/badge/chromologger/month)](https://pepy.tech/projects/chromologger)
-### [Versión actual: 0.1.8](#versiones)
+# CHROMOLOGGER
+
+<!-- Badges -->
+  <div>
+<!-- Total downloads -->
+    <a href="https://pepy.tech/projects/chromologger"><img src="https://static.pepy.tech/badge/chromologger" alt="PyPI Downloads"></a>
+<!-- Versión actual -->
+    <a href="https://pypi.org/project/chromologger/"><img alt="PyPI - Version" src="https://img.shields.io/pypi/v/chromologger?label=chromologger"></a>
+<!-- Python versions supported -->
+    <a href="https://python.org/"><img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/chromologger"></a> 
+<!-- Author -->
+    <a href="https://github.com/tutosrive"><img alt="Static Badge" src="https://img.shields.io/badge/Tutos%20Rive-Author-brightgreen"></a>
+<!-- Licencia -->
+    <a href="https://raw.githubusercontent.com/tutosrive/chromologger/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/tutosrive/chromologger"></a>
+  </div>
 
 ```shell
 pip install chromologger
