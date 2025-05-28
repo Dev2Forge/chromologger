@@ -31,7 +31,7 @@ pip install chromologger
 ```
 ---
 
-> ### Visite [chromologger](https://tutosrive.github.io/chromologger/) para más documentación
+> ### Visite [chromologger](https://dev2forge.github.io/chromologger/) para más documentación
 
 ```md
 # Se instalará automáticamente
@@ -77,6 +77,6 @@ Para empezar a usar, iniciaría con una instancia de la _clase_ **Logger**, la c
 - `v0.1.0`: Versión inicial
 
 Si desea conocer más acerca de, visite:
-- [Web de soporte](https://tutosrive.github.io/chromologger/)
+- [Web de soporte](https://dev2forge.github.io/chromologger/)
 - [Web pypi.org](https://pypi.org/project/chromologger/)
 - [Github project](https://github.com/tutosrive/chromologger/)
