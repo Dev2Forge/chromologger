@@ -79,4 +79,4 @@ Para empezar a usar, iniciaría con una instancia de la _clase_ **Logger**, la c
 Si desea conocer más acerca de, visite:
 - [Web de soporte](https://docs.dev2forge.software/chromologger/)
 - [Web pypi.org](https://pypi.org/project/chromologger/)
-- [Github project](https://github.com/tutosrive/chromologger/)
+- [Github project](https://github.com/Dev2Forge/chromologger)
