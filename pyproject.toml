@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "chromologger"
-version = "0.1.9.post1"
+version = "0.1.9.post2"
 description = "Chromologger está diseñado para facilitar la creación de registros (logs) en aplicaciones desarrolladas con Python"
 readme = { file = "README.md", content-type = "text/markdown", charset = "utf-8" }
 license = "MIT"
@@ -73,3 +73,4 @@ packages = { find = { where = ["src"] } }
 "Repository" = "https://github.com/Dev2Forge/chromologger/"
 "YouTube" = "https://www.youtube.com/@dev2forge"
 "Issues" = "https://github.com/Dev2Forge/chromologger/issues/"
+"Changelog" = "https://github.com/Dev2Forge/chromologger/blob/main/CHANGELOG.md"

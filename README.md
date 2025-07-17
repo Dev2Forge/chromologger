@@ -59,34 +59,8 @@ pip install chromologger
 - **log_e**: Permite registrar errores, es un registro más específico (Tomar registros de `Exception`)
 
 ## Versiones:
-- `v0.1.9`:
-  - Cambios reportados en: [`v0.1.9a1`, `v0.1.9a2`, `v0.1.9rc1`, `v0.1.9rc2`]
-- `v0.1.9rc2`:
-  - Actualización del README.md del proyecto
-- `v0.1.9rc1`:
-  - Se realizó una prueba de la versión `v0.1.9a2`, la cual es funcional
-  - Esta version es para pruebas antes de la `Release`
-- `v0.1.9a2`:
-  - Se corrigió el nombre del archivo de `log` el cual en algunos sistemas causaba errores.
-- `v0.1.9a1`:
-  - Pruebas cambios en la apertura y escritura de archivos
-  - Cambié la forma de obtener las rutas absolutas (cambio de usar el módulo `os` al objeto `pathlib.Path`)
-  - Pruebas en rutas relativas (Se admite pasar como nombre de archivo rutas relativas)
-    - Ejemplo: `log:Logger = Logger(../logs/operations.log)`, la ruta se "resolverá"
-  - Cambio de la estructura del mensaje de registro
-    - Antes: `2025-07-15 17:57:50.137718 - Este es un registro de prueba`
-    - Ahora:
-      - método `log(msg:str)`: `[INFO][2025-07-15 17:57:50.137718] - Este es un registro de prueba`
-      - método `log_e(e:Exception)`: `[ERROR][2025-07-15 18:57:50.137718] - Exception - FileNotFoundError - File - c:\Users\srm\Desktop\Bridgex\bridgex\__logger.py - ErrorLine: 35 - Messsage: [Errno 2] - No such file or directory: './DirectorioNoExiste/log'`
-- `v0.1.8`: Agrgué manejo de "errores" en el método `log_e(e: Exception)` y actualización del nombre de usuario
-- `v0.1.7`: Errores menores
-- `v0.1.6`: Actualización de dependencias 
-- `v0.1.5`: Arreglé el error que generé en la `v0.1.4`, nunca importé el traceback :|
-- `v0.1.4`: Se añadió el manejo de dependencias automáticas correctamente, antes las manejaba con `subpoccess`, pero ahora se hace con el `pip` original (`.toml[dependencies]`)
-- `v0.1.3`: El usuario queda libre de instalar dependencias, se instalan automáticamente
-- `v0.1.2`: Arreglo de errores por twine
-- `v0.1.1`: Algunos errores arreglados
-- `v0.1.0`: Versión inicial
+
+Revisa el [`Changelog.md`](https://github.com/Dev2Forge/chromologger/blob/main/CHANGELOG.md)
 
 Si desea conocer más acerca de, visite:
 - [Web de soporte](https://docs.dev2forge.software/chromologger/)
