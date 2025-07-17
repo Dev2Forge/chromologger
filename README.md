@@ -34,25 +34,23 @@ pip install chromologger
 
 > ### Visite [chromologger](https://docs.dev2forge.software/chromologger/) para más documentación
 
-```md
-# Se instalará automáticamente
-Requerimientos:
-    - chromolog>=0.2.0
-    # pip install chromolog
-    # Esto instalará la versión más reciente (v0.2.4)
-```
+> Descarga nuestro nuevo proyecto: [`pip install bridgex`](https://github.com/Dev2Forge/bridgex)
+> <div align="center"><img src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/logos/bridgex-v0.1.0.webp" width="200"></div>
 
 "**Chromologger**" es un módulo diseñado para facilitar la creación de registros (_logs_) en aplicaciones desarrolladas con **Python**. Proporciona una manera sencilla y estructurada de documentar eventos, errores y actividades en los programas, mejorando la capacidad de monitoreo y depuración del código.
 
-> Ejemplo de registro: En una línea
+> Ejemplo del registro de una `Excepción`: En una línea
 ```md
 >  
-2025-01-06 19:52:08.636560 - Exception - FileNotFoundError - File - c:\Users\srm\Desktop\msqlite\msqlite\__logger.py - ErrorLine: 35 - Messsage: [Errno 2] - No such file or directory: './data/log'
+[ERROR][2025-01-06 19:52:08.636560] - Exception - FileNotFoundError - File - c:\Users\srm\Desktop\msqlite\msqlite\__logger.py - ErrorLine: 35 - Messsage: [Errno 2] - No such file or directory: './data/log'
 ```
 
-Para empezar a usar, iniciaría con una instancia de la _clase_ **Logger**, la cual toma como argumentos el siguiente parámetro:
+> Ejemplo del registro de ejecución: En una línea
+```md
+>  
+[INFO][2025-01-06 20:52:08.636560] - El usuario ha modificado la configuración "xyz"'
+```
 
-- `name:str`: Nombre del archivo en el cual se guardarán los registros (Ej: `'log.log'`).
 > NOTA: Es necesario que el directorio donde se guardará el archivo esté creado, ÚNICAMENTE el **directorio**, el archivo se creará dentro de automáticamente...
 
 ## Métodos públicos disponibles:
@@ -60,13 +58,26 @@ Para empezar a usar, iniciaría con una instancia de la _clase_ **Logger**, la c
 - **log**: Permite guardar mensajes **generales** en el registro, es decir, **NO ERRORES**, mensajes de información _ordinaria_ (general).
 - **log_e**: Permite registrar errores, es un registro más específico (Tomar registros de `Exception`)
 
-### Métodos privados 🔏
-
-- **__write**: Escribe los mensages en el archivo cargado
-- **__date**: Obtiene la fecha actual
-- **__log**: Toma registro de errores internos, guarda los registros en el archivo "./log.log" (En el directorio raíz del módulo)
-
 ## Versiones:
+- `v0.1.9`:
+  - Cambios reportados en: [`v0.1.9a1`, `v0.1.9a2`, `v0.1.9rc1`, `v0.1.9rc2`]
+- `v0.1.9rc2`:
+  - Actualización del README.md del proyecto
+- `v0.1.9rc1`:
+  - Se realizó una prueba de la versión `v0.1.9a2`, la cual es funcional
+  - Esta version es para pruebas antes de la `Release`
+- `v0.1.9a2`:
+  - Se corrigió el nombre del archivo de `log` el cual en algunos sistemas causaba errores.
+- `v0.1.9a1`:
+  - Pruebas cambios en la apertura y escritura de archivos
+  - Cambié la forma de obtener las rutas absolutas (cambio de usar el módulo `os` al objeto `pathlib.Path`)
+  - Pruebas en rutas relativas (Se admite pasar como nombre de archivo rutas relativas)
+    - Ejemplo: `log:Logger = Logger(../logs/operations.log)`, la ruta se "resolverá"
+  - Cambio de la estructura del mensaje de registro
+    - Antes: `2025-07-15 17:57:50.137718 - Este es un registro de prueba`
+    - Ahora:
+      - método `log(msg:str)`: `[INFO][2025-07-15 17:57:50.137718] - Este es un registro de prueba`
+      - método `log_e(e:Exception)`: `[ERROR][2025-07-15 18:57:50.137718] - Exception - FileNotFoundError - File - c:\Users\srm\Desktop\Bridgex\bridgex\__logger.py - ErrorLine: 35 - Messsage: [Errno 2] - No such file or directory: './DirectorioNoExiste/log'`
 - `v0.1.8`: Agrgué manejo de "errores" en el método `log_e(e: Exception)` y actualización del nombre de usuario
 - `v0.1.7`: Errores menores
 - `v0.1.6`: Actualización de dependencias 
@@ -80,4 +91,4 @@ Para empezar a usar, iniciaría con una instancia de la _clase_ **Logger**, la c
 Si desea conocer más acerca de, visite:
 - [Web de soporte](https://docs.dev2forge.software/chromologger/)
 - [Web pypi.org](https://pypi.org/project/chromologger/)
-- [Github project](https://github.com/Dev2Forge/chromologger)
+- [GitHub project](https://github.com/Dev2Forge/chromologger)
